@@ -5,7 +5,7 @@ words contained in such text file for letter combinations consisting of more tha
 Program output will consist of up to 10 most common letter combinations and their difference
 in percentage displayed as a table and a bar chart.
 
-
+Currently program does not exclude dots and other symbols. only breaks and line breaks are excluded.
 
 HOW TO START THE FILE
 
