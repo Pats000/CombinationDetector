@@ -1,3 +1,12 @@
+DESCRIPTION:
+
+Program that uses any text file with random content as an input, and checks all the
+words contained in such text file for letter combinations consisting of more than 3 letters.
+Program output will consist of up to 10 most common letter combinations and their difference
+in percentage displayed as a table and a bar chart.
+
+
+
 HOW TO START THE FILE
 
 1. DOWNLOAD THE FOLDER
