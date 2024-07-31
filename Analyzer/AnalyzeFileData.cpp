@@ -60,21 +60,13 @@ void AnalyzeFileData::Analyze(vector<char>vBUFFER) {
     string sCombination;
     string sCombinationCopy;
     for(const auto& value : vBUFFER) {
-        if (value == '\n') return;
-        if (value == ' ') {
-            sCombination.clear();
-        }
-        else {
-            sCombination += value;
-        }
-        if (sCombination.length() == 4) {
-            SaveData(sCombination);
-        }
+        if (value == ' ' || value=='\n') sCombination.clear();
+        else sCombination += value;
+        if (sCombination.length() == 4) SaveData(sCombination);
         else if (sCombination.length() > 4) {
             sCombinationCopy = sCombination;
             while (sCombinationCopy.length() >= 4)
             {
-                
                 SaveData(sCombinationCopy);
                 sCombinationCopy.erase(0, 1);
             }
@@ -92,12 +84,8 @@ void AnalyzeFileData::SaveData(string sCombination) {
         [&sCombination](const pair<string, float>& VecPair) {
             return VecPair.first == sCombination;
         });
-    if (it != FileData.vData.end()) {
-        it->second++;
-    }
-    else {
-        FileData.vData.emplace_back(sCombination, 1);
-    }
+    if (it != FileData.vData.end()) it->second++;
+    else FileData.vData.emplace_back(sCombination, 1);
 }
 /*
 Function organizes struct to descending order.
@@ -131,7 +119,7 @@ void AnalyzeFileData::GetDataGraph() {
         if (count == DisplayDataAmount) return;
         float percentage = (StructData.second / FileData.TotalAmount) * 100;
         int barWidth = (percentage / 100) * maxBarWidth;
-        cout << StructData.first << ":\t\t" << string(barWidth, '|') << endl;
+        cout <<left<< setw(20) << StructData.first << string(barWidth, '|') << endl;
         count++; 
     }
 }
