@@ -16,3 +16,6 @@ HOW TO START THE FILE
       - TO START WITH YOUR OWN FILE WRITE "Start.exe file_name". NOTICER THAT IF YOUR CUSTOM FILE IS NOT IN THE SAME FOLDER YOU NEED TO GIVE ALSO THE LOCATION WITH THE FILE NAME.
 
 ![image](https://github.com/user-attachments/assets/caa1da8f-6f7c-48ec-a986-d2be67d35bc4)
+
+
+![image](https://github.com/user-attachments/assets/b3f4ae43-3b26-4b0e-9287-03ed498c262c)
